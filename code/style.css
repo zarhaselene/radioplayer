@@ -4,10 +4,19 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+}
 
 #channels {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .container {
@@ -51,5 +60,4 @@ img {
 .audioplayer {
   margin-top: 20px;
   width: 100%;
-  border-radius: 0 !important;
 }
