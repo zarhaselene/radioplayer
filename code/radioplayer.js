@@ -36,14 +36,28 @@ async function getRadio() {
     container.appendChild(imageContainer);
     wrapper.appendChild(heading);
 
+    // Steg 3. ta ut liveaudio.url från varje kanal och lägg i en audio tagg.
+    // <audio controls>
+    //   <source src="" type="audio/mpeg" />
+    // </audio>
+
+    // Check if channels exists
+    if (channel.liveaudio.url) {
+      const audioplayer = document.createElement("audio");
+      audioplayer.className = "audioplayer";
+      audioplayer.src = channel.liveaudio.url;
+      audioplayer.controls = true;
+
+      const source = document.createElement("source");
+      source.src = channel.liveaudio.url;
+      source.type = "audio/mpeg";
+
+      audioplayer.appendChild(source);
+      wrapper.appendChild(audioplayer);
+    }
     container.appendChild(wrapper);
     channelsEl.appendChild(container);
   });
 }
 
 getRadio();
-
-// Steg 3. ta ut liveaudio.url från varje kanal och lägg i en audio tagg.
-// <audio controls>
-//   <source src="" type="audio/mpeg" />
-// </audio>
