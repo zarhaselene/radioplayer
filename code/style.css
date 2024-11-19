@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#channels {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  margin: 20px 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+  width: 70%;
+}
+.image-container {
+  height: 100%;
+  position: relative;
+}
+.image-container::after {
+  content: "";
+  height: 90%;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.112);
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heading {
+  color: white;
+}
+
+.audioplayer {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 0 !important;
+}
